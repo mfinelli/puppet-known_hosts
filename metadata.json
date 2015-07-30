@@ -1,0 +1,14 @@
+{
+  "name": "mfinelli-known_hosts",
+  "version": "0.0.0",
+  "author": "mfinelli",
+  "summary": "Manage user and system known hosts.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/mfinelli/puppet-known_hosts",
+  "project_page": "https://github.com/mfinelli/puppet-known_hosts",
+  "issues_url": "https://github.com/mfinelli/puppet-known_hosts/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
