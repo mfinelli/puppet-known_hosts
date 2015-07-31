@@ -44,8 +44,8 @@ class known_hosts {
   }
 
   concat::fragment { 'system known hosts comment':
-    order => '01',
-    target => '/etc/ssh/ssh_known_hosts',
+    order   => '01',
+    target  => '/etc/ssh/ssh_known_hosts',
     content => "# KNOWN_HOSTS managed by puppet. Do not edit directly.\n"
   }
 }

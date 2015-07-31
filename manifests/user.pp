@@ -15,8 +15,8 @@ define known_hosts::user {
   }
 
   concat::fragment { "${name}'s local known hosts header":
-    order => '01',
-    target => "/home/${name}/.ssh/known_hosts",
+    order   => '01',
+    target  => "/home/${name}/.ssh/known_hosts",
     content => "# KNOWN_HOSTS managed by puppet. Do not edit directly.\n"
   }
 }

@@ -1,10 +1,10 @@
 define known_hosts::known_host (
-  $ensure  = 'present',
-  $user    = undef,
-  $revoked = false,
+  $ensure       = 'present',
+  $user         = undef,
+  $revoked      = false,
   $host_aliases = [],
-  $key = undef,
-  $type = undef
+  $key          = undef,
+  $type         = undef
 ) {
 
   if $user == undef {
@@ -22,8 +22,8 @@ define known_hosts::known_host (
   $aliases = join(concat(any2array($name), $host_aliases), ',')
 
   concat::fragment { "${name} known host for ${user}":
-    order => '50',
-    target => $target,
+    order   => '50',
+    target  => $target,
     content => "${revoked_str}${aliases} ${type} ${key}\n"
   }
 
