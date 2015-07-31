@@ -36,6 +36,16 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class known_hosts {
+  concat { '/etc/ssh/ssh_known_hosts':
+    ensure => present,
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644'
+  }
 
-
+  concat::fragment { 'system known hosts comment':
+    order => '01',
+    target => '/etc/ssh/ssh_known_hosts',
+    content => "# KNOWN_HOSTS managed by puppet. Do not edit directly.\n"
+  }
 }
