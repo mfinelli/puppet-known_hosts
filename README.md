@@ -47,6 +47,8 @@ To purge a given user's `known_hosts`:
 ::known_hosts::user { 'user': }
 ```
 
+## Usage
+
 At this point you can add back entries to the files. For system-wide:
 
 ```puppet
@@ -66,17 +68,50 @@ Or, for a specific user:
 }
 ```
 
-## Usage
-
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
-
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+### Classes
+
+#### Public classes
+
+* known_hosts: main class, sets up the system-wide known_hosts file
+
+### Defined types
+
+* known_hosts::user: sets up the known_hosts file for a user
+* known_hosts::known_host: adds an entry to the known_hosts file
+
+### Parameters: `known_hosts::known_host`
+
+The following parameters are available to the known_hosts::known_host defined
+type.
+
+#### `ensure`
+
+Whether or not the entry should be present or not.
+
+#### `user`
+
+The user to add the entry for. If left undefined then the entry is added
+system-wide (default).
+
+#### `revoked`
+
+Whether the key should be marked as revoked or not. Default is not revoked.
+
+#### `host_aliases`
+
+Additional aliases for the host that use the same key. Should be an array
+aliases.
+
+#### `type`
+
+The type of key to define. Valid options are any valid key type. See `man
+sshd` for more information.
+
+#### `key`
+
+The actual key to include in the entry.
 
 ## Limitations
 
