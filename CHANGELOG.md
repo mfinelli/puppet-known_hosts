@@ -4,7 +4,7 @@ This file keeps track of notable changes to the known_hosts puppet module.
 Like all [puppet modules](https://forge.puppetlabs.com) it adheres to
 [semantic versioning](http://semver.org).
 
-## [Unreleased]
+## [0.2.0] - 2015-07-31
 
 This release adds better documentation and testing.
 
@@ -14,6 +14,6 @@ This release adds better documentation and testing.
 * [Travis CI](https://travis-ci.org) configuration.
 * Better documentation in the individual classes and definitions.
 
-## [0.1.0] 2015-07-30
+## [0.1.0] - 2015-07-30
 
 Initial release
