@@ -12,6 +12,7 @@ This release adds better documentation and testing.
 
 * More complete information in the readme.
 * [Travis CI](https://travis-ci.org) configuration.
+* Better documentation in the individual classes and definitions.
 
 ## [0.1.0] 2015-07-30
 
