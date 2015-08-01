@@ -1,6 +1,6 @@
 {
   "name": "mfinelli-known_hosts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "mfinelli",
   "summary": "Manage user and system known hosts.",
   "license": "Apache-2.0",
